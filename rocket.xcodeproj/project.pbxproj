@@ -14,6 +14,10 @@
 		5A99A9D7295147AE00C1EC1C /* rocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99A9D6295147AE00C1EC1C /* rocketTests.swift */; };
 		5A99A9E1295147AE00C1EC1C /* rocketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99A9E0295147AE00C1EC1C /* rocketUITests.swift */; };
 		5A99A9E3295147AE00C1EC1C /* rocketUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99A9E2295147AE00C1EC1C /* rocketUITestsLaunchTests.swift */; };
+		5A99A9F329514A7000C1EC1C /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99A9F229514A7000C1EC1C /* ScheduleView.swift */; };
+		5A99A9F529514A9100C1EC1C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99A9F429514A9100C1EC1C /* NetworkManager.swift */; };
+		5A99A9F829514F7A00C1EC1C /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 5A99A9F729514F7A00C1EC1C /* Apollo */; };
+		5A99A9FA29514F7A00C1EC1C /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 5A99A9F929514F7A00C1EC1C /* ApolloWebSocket */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,8 @@
 		5A99A9DC295147AE00C1EC1C /* rocketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rocketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A99A9E0295147AE00C1EC1C /* rocketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rocketUITests.swift; sourceTree = "<group>"; };
 		5A99A9E2295147AE00C1EC1C /* rocketUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rocketUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5A99A9F229514A7000C1EC1C /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		5A99A9F429514A9100C1EC1C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A99A9F829514F7A00C1EC1C /* Apollo in Frameworks */,
+				5A99A9FA29514F7A00C1EC1C /* ApolloWebSocket in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +104,8 @@
 			children = (
 				5A99A9C5295147AE00C1EC1C /* rocketApp.swift */,
 				5A99A9C7295147AE00C1EC1C /* ContentView.swift */,
+				5A99A9F429514A9100C1EC1C /* NetworkManager.swift */,
+				5A99A9F229514A7000C1EC1C /* ScheduleView.swift */,
 				5A99A9C9295147AE00C1EC1C /* Assets.xcassets */,
 				5A99A9CB295147AE00C1EC1C /* Preview Content */,
 			);
@@ -143,6 +153,10 @@
 			dependencies = (
 			);
 			name = rocket;
+			packageProductDependencies = (
+				5A99A9F729514F7A00C1EC1C /* Apollo */,
+				5A99A9F929514F7A00C1EC1C /* ApolloWebSocket */,
+			);
 			productName = rocket;
 			productReference = 5A99A9C2295147AE00C1EC1C /* rocket.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 5A99A9B9295147AE00C1EC1C;
+			packageReferences = (
+				5A99A9F629514F7A00C1EC1C /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = 5A99A9C3295147AE00C1EC1C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A99A9F529514A9100C1EC1C /* NetworkManager.swift in Sources */,
 				5A99A9C8295147AE00C1EC1C /* ContentView.swift in Sources */,
 				5A99A9C6295147AE00C1EC1C /* rocketApp.swift in Sources */,
+				5A99A9F329514A7000C1EC1C /* ScheduleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +602,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A99A9F629514F7A00C1EC1C /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A99A9F729514F7A00C1EC1C /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A99A9F629514F7A00C1EC1C /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		5A99A9F929514F7A00C1EC1C /* ApolloWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A99A9F629514F7A00C1EC1C /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5A99A9BA295147AE00C1EC1C /* Project object */;
 }
