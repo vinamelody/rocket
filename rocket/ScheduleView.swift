@@ -8,6 +8,7 @@
 import SwiftUI
 
 import Apollo
+import ConfAPI
 
 struct ScheduleView: View {
     private var apollo: ApolloClient!
