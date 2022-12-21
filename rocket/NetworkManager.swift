@@ -12,7 +12,7 @@ import ApolloWebSocket
 class NetworkManager {
     static let shared = NetworkManager()
     let httpsEndpoint = "https://api.iosconf.sg/v1/graphql"
-    let wsEndpoint = "ws://api.iosconf.sg/v1/graphql"
+    let wsEndpoint = "wss://api.iosconf.sg/v1/graphql"
     
     /// A web socket transport to use for subscriptions
     private lazy var webSocketTransport: WebSocketTransport = {

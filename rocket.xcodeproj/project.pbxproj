@@ -20,6 +20,10 @@
 		5A99A9F329514A7000C1EC1C /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99A9F229514A7000C1EC1C /* ScheduleView.swift */; };
 		5A99A9F529514A9100C1EC1C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99A9F429514A9100C1EC1C /* NetworkManager.swift */; };
 		5A99AA092951FF4700C1EC1C /* apollo-codegen-config.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A99AA082951FF4700C1EC1C /* apollo-codegen-config.json */; };
+		BEC6E6E62952DFB300691BA4 /* TalkCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6E6E52952DFB300691BA4 /* TalkCardView.swift */; };
+		BEC6E6E82952EA4C00691BA4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC6E6E72952EA4C00691BA4 /* Colors.xcassets */; };
+		BEC6E6EA2952ECE700691BA4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6E6E92952ECE700691BA4 /* Color.swift */; };
+		BEC6E6EC2953085700691BA4 /* TalkDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6E6EB2953085700691BA4 /* TalkDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,10 @@
 		5A99A9F229514A7000C1EC1C /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		5A99A9F429514A9100C1EC1C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5A99AA082951FF4700C1EC1C /* apollo-codegen-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "apollo-codegen-config.json"; sourceTree = "<group>"; };
+		BEC6E6E52952DFB300691BA4 /* TalkCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkCardView.swift; sourceTree = "<group>"; };
+		BEC6E6E72952EA4C00691BA4 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		BEC6E6E92952ECE700691BA4 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		BEC6E6EB2953085700691BA4 /* TalkDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +121,11 @@
 				5A99A9C5295147AE00C1EC1C /* rocketApp.swift */,
 				5A99A9C7295147AE00C1EC1C /* ContentView.swift */,
 				5A99A9F429514A9100C1EC1C /* NetworkManager.swift */,
+				BEC6E6E92952ECE700691BA4 /* Color.swift */,
 				5A99A9F229514A7000C1EC1C /* ScheduleView.swift */,
+				BEC6E6E52952DFB300691BA4 /* TalkCardView.swift */,
+				BEC6E6EB2953085700691BA4 /* TalkDetailsView.swift */,
+				BEC6E6E72952EA4C00691BA4 /* Colors.xcassets */,
 				5A99A9C9295147AE00C1EC1C /* Assets.xcassets */,
 				5A99A9CB295147AE00C1EC1C /* Preview Content */,
 			);
@@ -273,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A99A9CD295147AE00C1EC1C /* Preview Assets.xcassets in Resources */,
+				BEC6E6E82952EA4C00691BA4 /* Colors.xcassets in Resources */,
 				5A99AA092951FF4700C1EC1C /* apollo-codegen-config.json in Resources */,
 				5A99A9CA295147AE00C1EC1C /* Assets.xcassets in Resources */,
 			);
@@ -299,10 +312,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEC6E6EC2953085700691BA4 /* TalkDetailsView.swift in Sources */,
 				5A99A9F529514A9100C1EC1C /* NetworkManager.swift in Sources */,
 				5A99A9C8295147AE00C1EC1C /* ContentView.swift in Sources */,
 				5A99A9C6295147AE00C1EC1C /* rocketApp.swift in Sources */,
 				5A99A9F329514A7000C1EC1C /* ScheduleView.swift in Sources */,
+				BEC6E6E62952DFB300691BA4 /* TalkCardView.swift in Sources */,
+				BEC6E6EA2952ECE700691BA4 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
