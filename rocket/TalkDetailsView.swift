@@ -7,7 +7,11 @@
 
 import SwiftUI
 
+import ConfAPI
+
 struct TalkDetailsView: View {
+//    var talk: GetScheduleSubscription.Data.Schedule
+
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .top) {

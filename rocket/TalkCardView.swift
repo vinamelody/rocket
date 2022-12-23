@@ -7,7 +7,11 @@
 
 import SwiftUI
 
+import ConfAPI
+
 struct TalkCardView: View {
+    var talk: GetScheduleSubscription.Data.Schedule
+
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .top) {
@@ -32,7 +36,7 @@ struct TalkCardView: View {
                     Text("9.15 am")
                         .font(.subheadline)
                         .foregroundColor(Color.gray)
-                    Text("Speaker name")
+                    Text(talk.speakers.first?.name ?? "")
                         .font(.title2)
                     Text("@twitter_handle")
                         .font(.caption)
@@ -53,10 +57,14 @@ struct TalkCardView: View {
     }
 }
 
-struct TalkCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        ForEach(ColorScheme.allCases, id: \.self) {
-            TalkCardView().preferredColorScheme($0)
-        }
-    }
-}
+//struct TalkCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ForEach(ColorScheme.allCases, id: \.self) {
+//            TalkCardView(talk: ).preferredColorScheme($0)
+//        }
+//    }
+//}
+
+//private extension GetScheduleSubscription.Data.Schedule {
+//    static let sampleTalk = GetScheduleSubscription.Data.Schedule(
+//}

@@ -11,17 +11,18 @@ struct ContentView: View {
     var body: some View {
         TabView {
             ScheduleView()
+                .environmentObject(ScheduleObservable())
                 .tabItem {
                     Label("Schedule", systemImage: "calendar")
                 }
-            ScheduleView()
-                .tabItem {
-                    Label("News", systemImage: "bubble.right.fill")
-                }
-            ScheduleView()
-                .tabItem {
-                    Label("Info", systemImage: "info.square.fill")
-                }
+//            ScheduleView()
+//                .tabItem {
+//                    Label("News", systemImage: "bubble.right.fill")
+//                }
+//            ScheduleView()
+//                .tabItem {
+//                    Label("Info", systemImage: "info.square.fill")
+//                }
         }
     }
 }

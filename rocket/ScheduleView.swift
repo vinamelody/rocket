@@ -7,31 +7,32 @@
 
 import SwiftUI
 
-import Apollo
-import ConfAPI
-
 struct ScheduleView: View {
-    private var apollo: ApolloClient!
-    private var subscription: Cancellable?
-    
-    init() {
-        self.apollo = NetworkManager.shared.client
-        subscription = apollo.subscribe(subscription: GetScheduleSubscription(), resultHandler: { result in
-            guard let data = try? result.get().data else {
-                print("get schedule error")
-                return
-            }
-            print(data)
-        })
-    }
-    
+
+    @EnvironmentObject var schedule: ScheduleObservable
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollViewReader { proxy in
+            ForEach(schedule.talks) { talk in
+                NavigationLink(tag: talk, selection: $schedule.selectedTalk) {
+                    TalkDetailsView()
+                } label: {
+                    TalkCardView(talk: talk)
+                }
+            }
+        }
     }
 }
 
 struct ScheduleView_Previews: PreviewProvider {
     static var previews: some View {
-        ScheduleView()
+        ForEach([ColorScheme.light, .dark], id: \.self) { scheme in
+            NavigationView {
+                ScheduleView()
+                    .navigationTitle(Text("Schedule", comment: "Navigation title for the full list of schedule"))
+                    .environmentObject(ScheduleObservable())
+            }
+            .preferredColorScheme(scheme)
+        }
     }
 }
